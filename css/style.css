@@ -1,0 +1,491 @@
+/* ============================================================
+   What's Wrong With Science? — Course Website
+   NYU Biology | Gresham Lab | Fall 2026
+   ============================================================ */
+
+:root {
+  --nyu-purple: #57068c;
+  --nyu-purple-dark: #3d0463;
+  --nyu-purple-light: #f3eaf9;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --border: #e0e0e0;
+  --bg: #ffffff;
+  --bg-alt: #f8f8f8;
+  --max-width: 1100px;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--nyu-purple);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Layout ---- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 72px 0;
+}
+
+section:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+.section-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 28px;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 1em;
+  color: var(--text);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Hero ---- */
+#hero {
+  background: var(--nyu-purple);
+  color: #fff;
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+#hero .kicker {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 16px;
+}
+
+#hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: normal;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#hero .tagline {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  max-width: 760px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+/* ---- About ---- */
+#about .meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+@media (max-width: 680px) {
+  #about .meta-grid { grid-template-columns: 1fr; }
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.course-details {
+  background: var(--nyu-purple-light);
+  border-left: 4px solid var(--nyu-purple);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 24px 28px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.92rem;
+}
+
+.course-details h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  margin-bottom: 14px;
+}
+
+.course-details dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+}
+
+.course-details dt {
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.course-details dd {
+  color: var(--text);
+}
+
+/* ---- Intro Slides ---- */
+#intro-slides .download-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  margin-top: 16px;
+  transition: box-shadow 0.15s;
+}
+
+#intro-slides .download-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+
+.download-card .icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.download-card .label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nyu-purple);
+}
+
+.download-card .sub {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ---- Sessions ---- */
+#sessions .sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.session-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 20px rgba(87,6,140,0.1);
+  transform: translateY(-2px);
+}
+
+.session-num {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  margin-bottom: 6px;
+}
+
+.session-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.session-theme {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.session-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.speaker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.speaker img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--nyu-purple-light);
+}
+
+.speaker-info .name {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.speaker-info .role {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.btn-slides {
+  display: inline-block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  border: 1.5px solid var(--nyu-purple);
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: background 0.15s, color 0.15s;
+  text-align: center;
+}
+
+.btn-slides:hover {
+  background: var(--nyu-purple);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- Syllabus ---- */
+#syllabus details {
+  margin-top: 24px;
+}
+
+#syllabus summary {
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--nyu-purple);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#syllabus summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#syllabus details[open] summary::after {
+  content: '−';
+}
+
+#syllabus summary::-webkit-details-marker { display: none; }
+
+.syllabus-body {
+  padding: 32px 0;
+  font-size: 0.97rem;
+  line-height: 1.75;
+  max-width: 760px;
+}
+
+.syllabus-body h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.syllabus-body h3:first-child { margin-top: 0; }
+
+.syllabus-body ul {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.syllabus-body ul li {
+  margin-bottom: 6px;
+}
+
+.syllabus-body .schedule-week {
+  border-left: 3px solid var(--nyu-purple);
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+.syllabus-body .week-date {
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--nyu-purple-dark);
+  margin-bottom: 4px;
+}
+
+/* ---- Assignments ---- */
+#assignments .assignments-list {
+  margin-top: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.assignment-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.assignment-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--nyu-purple);
+  color: #fff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.assignment-title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.assignment-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.assignment-item.final {
+  border-color: var(--nyu-purple);
+  background: var(--nyu-purple-light);
+}
+
+.assignment-item.final .assignment-num {
+  background: var(--nyu-purple-dark);
+  width: 42px;
+  height: 42px;
+  font-size: 0.75rem;
+}
+
+/* ---- Footer ---- */
+footer {
+  background: var(--nyu-purple-dark);
+  color: rgba(255,255,255,0.75);
+  padding: 40px 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.8;
+}
+
+footer a {
+  color: rgba(255,255,255,0.9);
+}
+
+footer strong {
+  color: #fff;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  section { padding: 48px 0; }
+  h2 { font-size: 1.5rem; }
+  #hero { padding: 56px 0 40px; }
+}
