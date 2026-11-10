@@ -47,24 +47,6 @@
 </section>
 
 <!-- ============================================================
-     INTRO SLIDES
-     ============================================================ -->
-<section id="intro-slides">
-  <div class="container">
-    <p class="section-label">Course Materials</p>
-    <h2>Course Introduction</h2>
-    <p>Download the introductory slides presented at the first session.</p>
-    <a href="https://drive.google.com/file/d/1UnawoFoHPVN7TF5BNO2yGFPMNu1IWLuG/view?usp=sharing" class="download-card" target="_blank" rel="noopener">
-      <span class="icon">&#x1F4CA;</span>
-      <div>
-        <div class="label">Course Introduction Slides</div>
-        <div class="sub">PDF &mdash; WWWS_Introduction.pdf</div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<!-- ============================================================
      SESSIONS
      ============================================================ -->
 <section id="sessions">
@@ -74,6 +56,22 @@
     <p>Each session runs Wednesday 6:00–7:30 PM and features a 20-minute lecture, 20 minutes of in-class activities, and a 45-minute Q&amp;A with a distinguished guest.</p>
 
     <div class="sessions-grid">
+
+      <!-- Course Introduction -->
+      <div class="session-card">
+        <div class="session-num">Introduction</div>
+        <div class="session-title">Course Introduction</div>
+        <div class="session-theme">What's Wrong With Science?</div>
+        <div class="session-date">Wednesday, September 9, 2026</div>
+        <div class="speaker">
+          <img src="images/gresham.jpg" alt="David Gresham">
+          <div class="speaker-info">
+            <div class="name">David Gresham</div>
+            <div class="role">Professor of Biology, NYU</div>
+          </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1UnawoFoHPVN7TF5BNO2yGFPMNu1IWLuG/view?usp=sharing" class="btn-slides" target="_blank" rel="noopener">View Slides</a>
+      </div>
 
       <!-- Session 1 -->
       <div class="session-card">
@@ -192,14 +190,17 @@
 </section>
 
 <!-- ============================================================
-     SYLLABUS
+     SYLLABUS + ASSIGNMENTS (tabbed)
      ============================================================ -->
-<section id="syllabus">
+<section id="resources">
   <div class="container">
-    <p class="section-label">Syllabus</p>
-    <h2>Course Syllabus</h2>
-    <details open>
-      <summary>BIOL-UA 800 &mdash; Fall 2026 &mdash; Full Syllabus</summary>
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="showTab('syllabus', this)">Course Syllabus</button>
+      <button class="tab-btn" onclick="showTab('assignments', this)">Assignments</button>
+    </div>
+
+    <!-- SYLLABUS TAB -->
+    <div id="tab-syllabus" class="tab-panel">
       <div class="syllabus-body">
 
         <h3>Course Information</h3>
@@ -300,64 +301,68 @@
         </div>
 
       </div><!-- .syllabus-body -->
-    </details>
+    </div><!-- #tab-syllabus -->
+
+    <!-- ASSIGNMENTS TAB -->
+    <div id="tab-assignments" class="tab-panel" style="display:none">
+      <p class="tab-intro">Assignments deepen engagement with course materials and serve as a tool for dialogue with classmates and the instructor. They take different forms: discussion posts, video annotations, reflections, and simulations.</p>
+
+      <div class="assignments-list">
+
+        <div class="assignment-item">
+          <div class="assignment-num">1</div>
+          <div>
+            <div class="assignment-title">Class 2 — Critique the "Golden Age of Science" Proposal</div>
+            <p class="assignment-desc">Read the proposed funding framework for a new golden age of science and write a critical response. Evaluate its assumptions, priorities, and likely consequences. Due before Session 2.</p>
+          </div>
+        </div>
+
+        <div class="assignment-item">
+          <div class="assignment-num">2</div>
+          <div>
+            <div class="assignment-title">Class 3 — Science Relay Reading Exercise</div>
+            <p class="assignment-desc">Trace how a scientific finding moves from a research paper to popular press coverage. Annotate both the original article and a news report covering the same finding, noting what changes, what's lost, and what's gained. Due before Session 3.</p>
+          </div>
+        </div>
+
+        <div class="assignment-item">
+          <div class="assignment-num">3</div>
+          <div>
+            <div class="assignment-title">Class 4 — Ethics Board Simulation</div>
+            <p class="assignment-desc">Review a research proposal raising ethical concerns and write a response as a member of an Institutional Review Board. Apply the frameworks discussed in class to evaluate risks, benefits, and safeguards. Due before Session 4.</p>
+          </div>
+        </div>
+
+        <div class="assignment-item">
+          <div class="assignment-num">4</div>
+          <div>
+            <div class="assignment-title">Class 6 — Mistrust &amp; Politicization Reflection</div>
+            <p class="assignment-desc">Drawing on the course materials and Session 5 guest discussion, reflect on a case where scientific consensus has been contested or politicized. Analyze the sources of mistrust and consider how they might be addressed. Due before Session 6.</p>
+          </div>
+        </div>
+
+        <div class="assignment-item final">
+          <div class="assignment-num">Final</div>
+          <div>
+            <div class="assignment-title">Final Project — "Headline from 2051"</div>
+            <p class="assignment-desc">Imagine a headline from 25 years in the future about a scientific development &mdash; breakthrough, failure, policy change, or social shift. Create a short recorded presentation, video, or audio piece that tells the story behind the headline and connects it to themes from the course. Completed individually or in groups of 2–3. Submit with a 1-page individual reflection.</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- #tab-assignments -->
+
   </div>
 </section>
 
-<!-- ============================================================
-     ASSIGNMENTS
-     ============================================================ -->
-<section id="assignments">
-  <div class="container">
-    <p class="section-label">Assignments</p>
-    <h2>Homework &amp; Final Project</h2>
-    <p>Assignments deepen engagement with course materials and serve as a tool for dialogue with classmates and the instructor. They take different forms: discussion posts, video annotations, reflections, and simulations.</p>
-
-    <div class="assignments-list">
-
-      <div class="assignment-item">
-        <div class="assignment-num">1</div>
-        <div>
-          <div class="assignment-title">Class 2 — Critique the "Golden Age of Science" Proposal</div>
-          <p class="assignment-desc">Read the proposed funding framework for a new golden age of science and write a critical response. Evaluate its assumptions, priorities, and likely consequences. Due before Session 2.</p>
-        </div>
-      </div>
-
-      <div class="assignment-item">
-        <div class="assignment-num">2</div>
-        <div>
-          <div class="assignment-title">Class 3 — Science Relay Reading Exercise</div>
-          <p class="assignment-desc">Trace how a scientific finding moves from a research paper to popular press coverage. Annotate both the original article and a news report covering the same finding, noting what changes, what's lost, and what's gained. Due before Session 3.</p>
-        </div>
-      </div>
-
-      <div class="assignment-item">
-        <div class="assignment-num">3</div>
-        <div>
-          <div class="assignment-title">Class 4 — Ethics Board Simulation</div>
-          <p class="assignment-desc">Review a research proposal raising ethical concerns and write a response as a member of an Institutional Review Board. Apply the frameworks discussed in class to evaluate risks, benefits, and safeguards. Due before Session 4.</p>
-        </div>
-      </div>
-
-      <div class="assignment-item">
-        <div class="assignment-num">4</div>
-        <div>
-          <div class="assignment-title">Class 6 — Mistrust &amp; Politicization Reflection</div>
-          <p class="assignment-desc">Drawing on the course materials and Session 5 guest discussion, reflect on a case where scientific consensus has been contested or politicized. Analyze the sources of mistrust and consider how they might be addressed. Due before Session 6.</p>
-        </div>
-      </div>
-
-      <div class="assignment-item final">
-        <div class="assignment-num">Final</div>
-        <div>
-          <div class="assignment-title">Final Project — "Headline from 2051"</div>
-          <p class="assignment-desc">Imagine a headline from 25 years in the future about a scientific development &mdash; breakthrough, failure, policy change, or social shift. Create a short recorded presentation, video, or audio piece that tells the story behind the headline and connects it to themes from the course. Completed individually or in groups of 2–3. Submit with a 1-page individual reflection.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).style.display = 'block';
+  btn.classList.add('active');
+}
+</script>
 
 <!-- ============================================================
      FOOTER

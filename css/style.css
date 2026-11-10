@@ -296,6 +296,45 @@ p:last-child {
   text-decoration: none;
 }
 
+/* ---- Tabs ---- */
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: var(--nyu-purple);
+}
+
+.tab-btn.active {
+  color: var(--nyu-purple);
+  border-bottom-color: var(--nyu-purple);
+}
+
+.tab-intro {
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
 /* ---- Syllabus ---- */
 #syllabus details {
   margin-top: 24px;
