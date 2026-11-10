@@ -145,54 +145,10 @@ p:last-child {
 }
 
 /* ---- About ---- */
-#about .meta-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 32px;
-}
-
-@media (max-width: 680px) {
-  #about .meta-grid { grid-template-columns: 1fr; }
-}
-
 .about-text {
   font-size: 1.05rem;
   line-height: 1.75;
-}
-
-.course-details {
-  background: var(--nyu-purple-light);
-  border-left: 4px solid var(--nyu-purple);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 24px 28px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.92rem;
-}
-
-.course-details h3 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--nyu-purple);
-  margin-bottom: 14px;
-}
-
-.course-details dl {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 6px 16px;
-}
-
-.course-details dt {
-  font-weight: 700;
-  color: var(--text-secondary);
-  white-space: nowrap;
-}
-
-.course-details dd {
-  color: var(--text);
+  max-width: 800px;
 }
 
 /* ---- Intro Slides ---- */
