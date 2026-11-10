@@ -49,10 +49,6 @@ section {
   padding: 72px 0;
 }
 
-section:nth-child(even) {
-  background: var(--bg-alt);
-}
-
 .section-label {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
@@ -296,18 +292,24 @@ p:last-child {
   text-decoration: none;
 }
 
-/* ---- Tabs ---- */
-.tab-buttons {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 36px;
+/* ---- Tab Nav ---- */
+.tab-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
   border-bottom: 2px solid var(--border);
-  padding-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tab-nav .container {
+  display: flex;
+  gap: 0;
 }
 
 .tab-btn {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--text-secondary);
@@ -315,9 +317,10 @@ p:last-child {
   border: none;
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
-  padding: 10px 20px;
+  padding: 16px 24px;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
@@ -329,10 +332,24 @@ p:last-child {
   border-bottom-color: var(--nyu-purple);
 }
 
+/* ---- Tab Panels ---- */
+.tab-content {
+  min-height: 60vh;
+}
+
+.tab-panel {
+  padding: 64px 0;
+}
+
+.tab-panel:nth-child(even) {
+  background: var(--bg-alt);
+}
+
 .tab-intro {
   font-size: 0.97rem;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  max-width: 760px;
 }
 
 /* ---- Syllabus ---- */

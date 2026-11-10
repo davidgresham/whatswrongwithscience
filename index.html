@@ -33,27 +33,37 @@
 </section>
 
 <!-- ============================================================
-     ABOUT
+     TAB NAV
      ============================================================ -->
-<section id="about">
+<nav class="tab-nav" id="tab-nav">
   <div class="container">
-    <p class="section-label">About the Course</p>
-    <div class="about-text">
+    <button class="tab-btn active" onclick="showTab('about', this)">About the Course</button>
+    <button class="tab-btn" onclick="showTab('sessions', this)">Weekly Sessions</button>
+    <button class="tab-btn" onclick="showTab('syllabus', this)">Course Syllabus</button>
+    <button class="tab-btn" onclick="showTab('assignments', this)">Assignments</button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     TAB CONTENT
+     ============================================================ -->
+<div class="tab-content">
+
+  <!-- ABOUT -->
+  <div id="tab-about" class="tab-panel">
+    <div class="container">
+      <div class="about-text">
         <p>On March 8, 2021 I was greeted by a young American soldier as I entered the Javits Center to receive my first COVID vaccine. After a year of fear, isolation, and global upheaval, the mRNA vaccine was a turning point for humanity. Developed with unprecedented speed through the United States government's Operation Warp Speed, it was a triumph of modern science working in concert with public policy. But, just four years later, federal advisory committees on immunization were dismantled, funding for mRNA vaccine development was halted, and federal support for scientific research — from cancer biology to space exploration — was sharply reduced. The scientific enterprise, long credited with driving economic growth, extending human lifespan, and expanding our understanding of the universe, had become politically vulnerable and publicly contested. <em>What happened?</em></p>
         <p>This engaging 1-credit course explores how science works in society — not just in laboratories and journals, but in governments, markets, media, and everyday life. Through discussions and real-world case studies, students from all disciplines will examine the origins of modern science and confront the social, political, and economic forces that shape the scientific enterprise.</p>
         <p>The course combines weekly lectures, in-class activities, and Q&amp;A with notable NYU scholars and guests to grapple with the central challenges facing science today and to consider how science can best serve society.</p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- ============================================================
-     SESSIONS
-     ============================================================ -->
-<section id="sessions">
-  <div class="container">
-    <p class="section-label">Weekly Sessions</p>
-    <h2>Seven Weeks, Seven Questions</h2>
-    <p>Each session runs Wednesday 6:00–7:30 PM and features a 20-minute lecture, 20 minutes of in-class activities, and a 45-minute Q&amp;A with a distinguished guest.</p>
+  <!-- SESSIONS -->
+  <div id="tab-sessions" class="tab-panel" style="display:none">
+    <div class="container">
+      <p class="tab-intro">Each session runs Wednesday 6:00–7:30 PM and features a 20-minute lecture, 20 minutes of in-class activities, and a 45-minute Q&amp;A with a distinguished guest.</p>
 
     <div class="sessions-grid">
 
@@ -186,21 +196,12 @@
       </div>
 
     </div><!-- .sessions-grid -->
-  </div>
-</section>
-
-<!-- ============================================================
-     SYLLABUS + ASSIGNMENTS (tabbed)
-     ============================================================ -->
-<section id="resources">
-  <div class="container">
-    <div class="tab-buttons">
-      <button class="tab-btn active" onclick="showTab('syllabus', this)">Course Syllabus</button>
-      <button class="tab-btn" onclick="showTab('assignments', this)">Assignments</button>
     </div>
+  </div><!-- #tab-sessions -->
 
-    <!-- SYLLABUS TAB -->
-    <div id="tab-syllabus" class="tab-panel">
+  <!-- SYLLABUS -->
+  <div id="tab-syllabus" class="tab-panel" style="display:none">
+    <div class="container">
       <div class="syllabus-body">
 
         <h3>Course Information</h3>
@@ -301,10 +302,12 @@
         </div>
 
       </div><!-- .syllabus-body -->
-    </div><!-- #tab-syllabus -->
+    </div>
+  </div><!-- #tab-syllabus -->
 
-    <!-- ASSIGNMENTS TAB -->
-    <div id="tab-assignments" class="tab-panel" style="display:none">
+  <!-- ASSIGNMENTS -->
+  <div id="tab-assignments" class="tab-panel" style="display:none">
+    <div class="container">
       <p class="tab-intro">Assignments deepen engagement with course materials and serve as a tool for dialogue with classmates and the instructor. They take different forms: discussion posts, video annotations, reflections, and simulations.</p>
 
       <div class="assignments-list">
@@ -350,10 +353,10 @@
         </div>
 
       </div>
-    </div><!-- #tab-assignments -->
+    </div>
+  </div><!-- #tab-assignments -->
 
-  </div>
-</section>
+</div><!-- .tab-content -->
 
 <script>
 function showTab(name, btn) {
