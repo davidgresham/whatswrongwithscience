@@ -124,6 +124,15 @@ p:last-child {
   line-height: 1.65;
 }
 
+#hero .instructor {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  margin-top: 20px;
+  letter-spacing: 0.03em;
+}
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
