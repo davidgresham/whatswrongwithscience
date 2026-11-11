@@ -301,6 +301,69 @@ p:last-child {
   text-decoration: none;
 }
 
+/* ---- Q&A Questions (session cards) ---- */
+.session-questions {
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-bottom: 16px;
+}
+
+.session-questions summary {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nyu-purple);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-questions summary::-webkit-details-marker { display: none; }
+
+.session-questions summary::after {
+  content: '+';
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.session-questions[open] summary::after {
+  content: '−';
+}
+
+.questions-body {
+  margin-top: 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.questions-body .q-section {
+  font-weight: 700;
+  color: var(--nyu-purple-dark);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.questions-body .q-section:first-child { margin-top: 0; }
+
+.questions-body ol {
+  padding-left: 18px;
+  margin: 0 0 4px 0;
+}
+
+.questions-body li {
+  margin-bottom: 5px;
+}
+
 /* ---- Tab Nav ---- */
 .tab-nav {
   position: sticky;
